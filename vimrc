@@ -36,6 +36,8 @@ Bundle 'michalliu/sourcebeautify.vim'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'teranex/jk-jumps.vim'
 
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'wlangstroth/vim-racket'
 filetype plugin indent on " required by Vundle 
 
 
@@ -43,6 +45,10 @@ filetype plugin indent on " required by Vundle
 
 " Enable syntax highlighting
 syntax on
+
+filetype on
+filetype indent on
+filetype plugin on
 
 " Sets the colorscheme for terminal sessions too.
 colorscheme badwolf
@@ -219,3 +225,8 @@ nnoremap <Space> za
 
 " Toggle relative/absolute line counting
 let g:NumberToggleTrigger="<C-l>"
+
+" Enabling racket highlight
+if has("autocmd")
+	au BufReadPost *.rkt,*.rktl set filetype=scheme
+endif
