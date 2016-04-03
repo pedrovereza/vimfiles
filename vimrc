@@ -37,7 +37,8 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'teranex/jk-jumps.vim'
 
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'wlangstroth/vim-racket'
+Bundle 'scrooloose/syntastic'
+Bundle 'maksimr/vim-jsbeautify'
 filetype plugin indent on " required by Vundle 
 
 
@@ -106,7 +107,7 @@ set directory=$HOME/.vim/tmp//,.
 " Global tab width.
 set tabstop=4
 " And again, related.
-set shiftwidth=4
+set shiftwidth=2
 " Specific shiftwidth for ruby files
 autocmd FileType ruby set shiftwidth=2
 " But not for erb files...
@@ -119,6 +120,11 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 
 " Leader = ,
 let mapleader = ","
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " Tab mappings.
 nnoremap <leader>t :tabnew<cr>
@@ -214,6 +220,9 @@ autocmd BufRead,BufNewFile *.json set filetype=javascript
 " Sets html syntax for *.ejs files.
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 
+" Sets racket syntax for .rkt files.
+autocmd BufRead,BufNewFile *.rkt set filetype=scheme
+
 " Wrap markdown files.
 autocmd BufRead,BufNewFile *.md set wrap
 
@@ -226,7 +235,26 @@ nnoremap <Space> za
 " Toggle relative/absolute line counting
 let g:NumberToggleTrigger="<C-l>"
 
+" Syntasttic
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_jshint_exec='~/gap/trunk/ois/OisWeb/node_modules/jshint/bin/jshint'
+let g:syntastic_check_on_open=1
+
+" Ack
+let g:ackprg="ag --nogroup --nocolor --column --follow
+              \ --ignore-dir='log'
+              \ --ignore-dir='bower_components'
+              \ --ignore-dir='_bower'
+              \ --ignore-dir='node_modules'
+              \ --ignore-dir='_site'
+              \ --ignore-dir='generated'
+              \ --ignore-dir='OisServer'
+              \ --ignore-dir='test_out'"
+
 " Enabling racket highlight
 if has("autocmd")
 	au BufReadPost *.rkt,*.rktl set filetype=scheme
 endif
+
+map <c-f> :call JsBeautify()<cr>
+
