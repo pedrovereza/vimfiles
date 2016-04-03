@@ -1,8 +1,3 @@
-pedrofranceschi's vimfiles
-========
-
-These are my vimfiles. I created them almost from scratch when I started using Vim and adapted them to my needs.
-
 #### What's included
 
 * [Bad Wolf (colorscheme)](https://github.com/sjl/badwolf)
@@ -39,7 +34,7 @@ Go to your home directory:
 Clone my vimfiles repo:
 
 
-    git clone --recursive https://github.com/pedrofranceschi/vimfiles.git
+    git clone --recursive https://github.com/pedrovereza/vimfiles.git
 
 Rename the repo to .vim in your home directory:
 
