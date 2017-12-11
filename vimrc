@@ -4,8 +4,8 @@ set nocompatible
 
 " Vundle setup
 filetype off " required by Vundle 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " My bundles from GitHub
 Bundle 'sjl/badwolf'
@@ -39,6 +39,8 @@ Bundle 'teranex/jk-jumps.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'joukevandermaas/vim-ember-hbs'
+call vundle#end() 
 filetype plugin indent on " required by Vundle 
 
 
@@ -105,13 +107,11 @@ set nowritebackup
 set directory=$HOME/.vim/tmp//,.
 
 " Global tab width.
-set tabstop=4
+set tabstop=2
 " And again, related.
 set shiftwidth=2
 " Specific shiftwidth for ruby files
-autocmd FileType ruby set shiftwidth=2
-" But not for erb files...
-autocmd FileType eruby set shiftwidth=4
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,sh,hbs set ai sw=2 sts=2 et
 
 " Show the status line all the time
 set laststatus=2
@@ -199,7 +199,7 @@ let g:airline#extensions#default#section_truncate_width = {
 " CtrlP - works not only in ancestor directories of my working directory.
 let g:ctrlp_working_path_mode = 'a'
 " Custom ignores
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|build\|tmp\|assets\'
 
 " Yankring default mapping conflicts with CtrlP
 let g:yankring_replace_n_pkey = '<C-M>'
@@ -237,7 +237,6 @@ let g:NumberToggleTrigger="<C-l>"
 
 " Syntasttic
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_jshint_exec='~/gap/trunk/ois/OisWeb/node_modules/jshint/bin/jshint'
 let g:syntastic_check_on_open=1
 
 " Ack
@@ -248,7 +247,9 @@ let g:ackprg="ag --nogroup --nocolor --column --follow
               \ --ignore-dir='node_modules'
               \ --ignore-dir='_site'
               \ --ignore-dir='generated'
-              \ --ignore-dir='OisServer'
+              \ --ignore-dir='assets'
+              \ --ignore-dir='build'
+              \ --ignore-dir='tmp'
               \ --ignore-dir='test_out'"
 
 " Enabling racket highlight
