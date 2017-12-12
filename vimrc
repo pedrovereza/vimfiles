@@ -40,6 +40,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'joukevandermaas/vim-ember-hbs'
+Bundle 'airblade/vim-gitgutter'
 call vundle#end() 
 filetype plugin indent on " required by Vundle 
 
