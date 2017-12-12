@@ -10,7 +10,8 @@ call vundle#begin()
 " My bundles from GitHub
 Bundle 'sjl/badwolf'
 Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'b4winckler/vim-objc'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tomtom/tcomment_vim'
