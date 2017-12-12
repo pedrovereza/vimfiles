@@ -40,6 +40,10 @@ Rename the repo to .vim in your home directory:
 
     mv vimfiles ~/.vim
 
+Link vimrc to your home directory:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+
 Open "mensch-Powerline.otf" and click "Install font" to install Powerline's font which supports fancy characters.
 
 	open Monaco-Powerline.otf
