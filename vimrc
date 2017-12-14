@@ -234,6 +234,9 @@ set foldlevelstart=20
 " Toggles folding with space
 nnoremap <Space> za
 
+" Removes trailing whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Toggle relative/absolute line counting
 let g:NumberToggleTrigger="<C-l>"
 
