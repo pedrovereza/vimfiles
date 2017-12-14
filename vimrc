@@ -115,6 +115,9 @@ set shiftwidth=2
 " Specific shiftwidth for ruby files
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,sh,hbs,scss set ai sw=2 sts=2 et
 
+" Insert spaces instead of tab
+set expandtab
+
 " Show the status line all the time
 set laststatus=2
 " Useful status information at bottom of screen
