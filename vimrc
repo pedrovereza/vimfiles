@@ -113,7 +113,7 @@ set tabstop=2
 " And again, related.
 set shiftwidth=2
 " Specific shiftwidth for ruby files
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,sh,hbs set ai sw=2 sts=2 et
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,sh,hbs,scss set ai sw=2 sts=2 et
 
 " Show the status line all the time
 set laststatus=2
