@@ -3,7 +3,7 @@ set nocompatible
 
 
 " Vundle setup
-filetype off " required by Vundle 
+filetype off " required by Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -42,11 +42,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'joukevandermaas/vim-ember-hbs'
 Bundle 'airblade/vim-gitgutter'
-call vundle#end() 
-filetype plugin indent on " required by Vundle 
-
-
-" Other configurations...
+call vundle#end()
+filetype plugin indent on " required by Vundle
 
 " Enable syntax highlighting
 syntax on
@@ -97,7 +94,7 @@ set incsearch
 set nohlsearch
 
 " Turn off line wrapping.
-set nowrap    
+set nowrap
 " Show 3 lines of context around the cursor.
 set scrolloff=3
 
