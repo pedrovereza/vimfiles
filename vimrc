@@ -260,7 +260,6 @@ let g:ackprg="ag --nogroup --nocolor --column --follow
               \ --ignore-dir='node_modules'
               \ --ignore-dir='_site'
               \ --ignore-dir='generated'
-              \ --ignore-dir='assets'
               \ --ignore-dir='build'
               \ --ignore-dir='tmp'
               \ --ignore-dir='test_out'"
