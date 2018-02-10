@@ -231,6 +231,9 @@ autocmd BufRead,BufNewFile *.ejs set filetype=html
 " Sets racket syntax for .rkt files.
 autocmd BufRead,BufNewFile *.rkt set filetype=scheme
 
+" Sets ruby syntax for .thor files.
+autocmd BufRead,BufNewFile *.thor set filetype=ruby
+
 " Wrap markdown files.
 autocmd BufRead,BufNewFile *.md set wrap
 
