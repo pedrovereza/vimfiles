@@ -42,6 +42,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'joukevandermaas/vim-ember-hbs'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'fvictorio/vim-extract-variable'
 call vundle#end()
 filetype plugin indent on " required by Vundle
 
