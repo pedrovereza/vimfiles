@@ -206,7 +206,7 @@ let g:airline#extensions#default#section_truncate_width = {
 " CtrlP - works not only in ancestor directories of my working directory.
 let g:ctrlp_working_path_mode = 'a'
 " Custom ignores
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|build\|tmp\|bower_components\|\screenshots\'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\build\|tmp\|bower_components\|\screenshots\'
 
 " Yankring default mapping conflicts with CtrlP
 let g:yankring_replace_n_pkey = '<C-M>'
