@@ -12,7 +12,6 @@ Bundle 'sjl/badwolf'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'msanders/snipmate.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mileszs/ack.vim'
@@ -42,6 +41,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'joukevandermaas/vim-ember-hbs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fvictorio/vim-extract-variable'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'elixir-editors/vim-elixir'
 call vundle#end()
 filetype plugin indent on " required by Vundle
 
