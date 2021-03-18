@@ -43,6 +43,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'fvictorio/vim-extract-variable'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'elixir-editors/vim-elixir'
+Bundle 'maxmellon/vim-jsx-pretty'
+Bundle 'vim-ruby/vim-ruby'
 call vundle#end()
 filetype plugin indent on " required by Vundle
 
@@ -171,6 +173,7 @@ nnoremap <leader>hs :set hlsearch!<cr>
 noremap <leader>nt :NERDTreeToggle<CR>
 
 let g:NERDTreeHijackNetrw = 0
+let g:NERDTreeDirArrows=0
 
 " Maps <C-C> to <esc>
 noremap <C-C> <esc>
@@ -263,6 +266,7 @@ let g:ackprg="ag --nogroup --nocolor --column --follow
               \ --ignore-dir='generated'
               \ --ignore-dir='build'
               \ --ignore-dir='tmp'
+              \ --ignore-dir='dist'
               \ --ignore-dir='test_out'"
 
 " Enabling racket highlight
@@ -271,4 +275,5 @@ if has("autocmd")
 endif
 
 map <c-f> :call JsBeautify()<cr>
+set encoding=utf-8
 
