@@ -237,6 +237,9 @@ autocmd BufRead,BufNewFile *.rkt set filetype=scheme
 " Sets ruby syntax for .thor files.
 autocmd BufRead,BufNewFile *.thor set filetype=ruby
 
+" Sets ruby syntax for .thor files.
+autocmd BufRead,BufNewFile Fastfile set filetype=ruby
+
 " Wrap markdown files.
 autocmd BufRead,BufNewFile *.md set wrap
 
